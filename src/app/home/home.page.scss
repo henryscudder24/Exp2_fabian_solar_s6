@@ -1,0 +1,22 @@
+ion-header,
+ion-toolbar,
+ion-title {
+  --ion-background-color: var(--ion-background-color);
+  --ion-text-color: var(--ion-text-color);
+}
+
+mat-card {
+  background-color: var(--ion-card-background-color);
+  color: var(--ion-text-color);
+
+  mat-card-header,
+  mat-card-title,
+  mat-card-content {
+    color: var(--ion-text-color);
+  }
+}
+
+ion-content {
+  --ion-background-color: var(--ion-background-color);
+  --ion-text-color: var(--ion-text-color);
+}

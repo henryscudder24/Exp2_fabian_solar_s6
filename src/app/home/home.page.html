@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Solar Solutions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title class="ion-text-color">Workspace</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <app-animated-component></app-animated-component>
+            <ion-button expand="full" routerLink="/upload" color="primary">Subir Documentos</ion-button>
+            <ion-button expand="full" routerLink="/files" color="primary">Repositorio</ion-button>
+            <ion-button expand="full" routerLink="/login" color="primary">Iniciar Sesión</ion-button>
+          </mat-card-content>
+        </mat-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

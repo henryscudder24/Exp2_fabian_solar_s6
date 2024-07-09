@@ -1,0 +1,37 @@
+.animated-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: linear-gradient(135deg, #d69b95, #6662de);
+
+    .custom-card {
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+
+        .custom-card-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            background: #070707;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+
+            .custom-card-title {
+                color: #fff;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+        }
+
+        .custom-card-content {
+            padding: 24px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+    }
+}

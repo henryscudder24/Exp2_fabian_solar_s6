@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Mi espacio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Mis Documentos</ion-card-title>
+            <ion-card-title>Fabián Solar</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item *ngFor="let file of filteredFiles">
+                <ion-label>{{ file.name }}</ion-label>
+                <ion-button fill="clear" (click)="shareFile(file)">Compartir</ion-button>
+                <ion-button fill="clear" (click)="DownloadFile(file)">Descargar</ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Posts del Usuario</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <div *ngIf="errorMessage" class="error-message">
+              {{ errorMessage }}
+            </div>
+            <ion-list *ngIf="!errorMessage">
+              <ion-item *ngFor="let post of userPosts">
+                <ion-label>
+                  <h2>{{ post.title }}</h2>
+                  <p>{{ post.body }}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<style>
+  .error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+</style>

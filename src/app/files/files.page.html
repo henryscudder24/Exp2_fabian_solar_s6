@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Workspace</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Archivos Subidos</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <input type="file" (change)="onFileSelected($event)" />
+            <ion-list>
+              <ion-item *ngFor="let file of files">
+                <ion-label>{{ file.name }}</ion-label>
+                <ion-button fill="clear" (click)="shareFile(file)">Compartir</ion-button>
+                <ion-button fill="clear" (click)="downloadFile(file)">Descargar</ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-split-pane when="(min-width: 768px)" contentId="main-content">
+    <ion-menu contentId="main-content" menuId="first" side="start">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="toggleTheme()">
+              <ion-icon [name]="isDarkMode ? 'sunny' : 'moon'"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item routerLink="/home" routerDirection="root">Home</ion-item>
+          <ion-item routerLink="/upload" routerDirection="root">Cargar Archivos</ion-item>
+          <ion-item routerLink="/files" routerDirection="root">Workspace</ion-item>
+          <ion-item routerLink="/myspace" routerDirection="root">Mi Contenido</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
