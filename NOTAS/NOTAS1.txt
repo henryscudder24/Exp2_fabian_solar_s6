@@ -1,0 +1,174 @@
+PALOTEO *1*
+
+
+
+# Instalar dependencias
+npm install
+
+# Correr el servidor de desarrollo
+ionic serve
+
+# Crear una nueva página en Ionic
+ionic generate page nombre-pagina
+
+# Crear un nuevo componente en Ionic
+ionic generate component nombre-componente
+
+# Crear un nuevo servicio en Ionic
+ionic generate service nombre-servicio
+
+# Crear un nuevo módulo en Ionic
+ionic generate module nombre-modulo
+
+# Crear un nuevo componente en Angular
+ng generate component nombre-componente
+
+# Crear un nuevo servicio en Angular
+ng generate service nombre-servicio
+
+# Crear un nuevo módulo en Angular
+ng generate module nombre-modulo
+
+# Crear una nueva directiva en Angular
+ng generate directive nombre-directiva
+
+# Crear un nuevo pipe en Angular
+ng generate pipe nombre-pipe
+
+# Compilar para producción
+ionic build --prod
+
+# Agregar una plataforma (Android/iOS)
+ionic capacitor add android
+ionic capacitor add ios
+
+# Sincronizar cambios con la plataforma
+ionic capacitor sync
+
+
+#Instalar dependencias para SQLite:
+npm install cordova-sqlite-storage
+npm install @awesome-cordova-plugins/sqlite
+npm install @ionic-native/core
+
+# Instalar cuando hay conflictos
+npm install @ionic-native/core --legacy-peer-deps
+
+
+#Instalar dependencia para almacenamiento en IONIC
+npm install @ionic/storage-angular
+
+
+
+npm install @angular/forms --legacy-peer-deps
+npm install @angular/router --legacy-peer-deps
+npm install @angular/material --legacy-peer-deps
+npm install @ionic/angular --legacy-peer-deps
+npm install @awesome-cordova-plugins/core --legacy-peer-deps
+npm install @awesome-cordova-plugins/sqlite --legacy-peer-deps
+npm install @ionic/storage-angular --legacy-peer-deps
+
+
+
+
+
+PALOTEO *2*
+python -m venv myenv
+myenv\Scripts\activate
+
+pip install django
+pip install djangorestframework
+
+django-admin startproject myproject
+cd myproject
+python manage.py startapp myapp
+
+siempre para ejecutar.......
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+
+
+python manage.py createsuperuser
+fsolarc
+henry8419
+
+http://localhost:8000/admin
+
+
+conectar a plugin
+sqlite3 db.sqlite3
+
+CREATE TABLE SSmatriz (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    x varchar(255) NOT NULL,
+    y	 varchar(500) NOT NULL,
+    z varchar(255) NOT NULL
+);
+
+INSERT INTO SSmatriz (x, y, z) VALUES ('aa','bb.', 'cc');
+
+
+Limpiar tu proyecto Ionic:
+Remove-Item -Recurse -Force www, platforms, node_modules
+(Remove-Item -Recurse -Force node_modules, package-lock.json)
+npm install
+npm install --legacy-peer-deps
+
+
+Reinstalar la plataforma Android:
+ionic cordova platform add android
+Generar una nueva APK:
+
+Generar una nueva APK:
+ionic cordova build android --prod --release
+
+Firmar y optimizar la APK:
+Crear un keystore (si es necesario):
+keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+
+Firmar la APK:
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk my-key-alias
+
+Optimizar la APK:
+zipalign -v 4 platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk MyApp.apk
+
+Verificar la firma:
+jarsigner -verify -verbose -certs MyApp.apk
+
+
+
+CON CAPACITOR:
+Remove-Item -Recurse -Force android
+npx cap add android
+ng build --configuration production
+
+Preparar el Proyecto Capacitor:
+npx cap copy
+npx cap sync
+
+Usar Gradle para Construir la APK:
+cd android
+./gradlew assembleRelease
+
+Firmar la APK:
+Crear un keystore (si es necesario): solar0
+keytool -genkey -v -keystore my-release-key.keystore -alias XXX -keyalg RSA -keysize 2048 -validity 10000
+
+Firmar la APK:
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app/build/outputs/apk/release/app-release-unsigned.apk XXX
+
+Optimizar la APK:
+C:\Users\RUTA\zipalign.exe -v 4 app/build/outputs/apk/release/app-release-unsigned.apk MyApp.apk
+
+
+Verificar la Firma:
+jarsigner -verify -verbose -certs MyApp.apk
+
+
+cd ..
+npx cap open android
+
+
+

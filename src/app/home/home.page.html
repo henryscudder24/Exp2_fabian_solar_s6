@@ -24,5 +24,25 @@
         </mat-card>
       </ion-col>
     </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="6">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title class="ion-text-color">API Propia -</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <ion-list>
+              <ion-item *ngFor="let item of dataMatrix">
+                <ion-label>
+                  <h2>{{ item.Lenguaje }}</h2>
+                  <p>{{ item.Descripcion }}</p>
+                  <p><strong>Usos:</strong> {{ item.Usos }}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </mat-card-content>
+        </mat-card>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>

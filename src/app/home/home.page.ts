@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
+import { DataMatrixService } from '../data-matrix.service';
 
 @Component({
   selector: 'app-home',
@@ -18,10 +19,17 @@ import { trigger, style, animate, transition } from '@angular/animations';
   ]
 })
 export class HomePage implements OnInit {
+  dataMatrix: any[] = [];
 
-  constructor() { }
+  constructor(private dataMatrixService: DataMatrixService) { }
 
   ngOnInit() {
+    this.getData();
   }
 
+  getData() {
+    this.dataMatrixService.getDataMatrix().subscribe(data => {
+      this.dataMatrix = data;
+    });
+  }
 }
