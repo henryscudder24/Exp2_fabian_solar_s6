@@ -137,7 +137,7 @@ zipalign -v 4 platforms\android\app\build\outputs\apk\release\app-release-unsign
 Verificar la firma:
 jarsigner -verify -verbose -certs MyApp.apk
 
-
+******************************
 
 CON CAPACITOR:
 Remove-Item -Recurse -Force android
@@ -153,14 +153,14 @@ cd android
 ./gradlew assembleRelease
 
 Firmar la APK:
-Crear un keystore (si es necesario): solar0
-keytool -genkey -v -keystore my-release-key.keystore -alias XXX -keyalg RSA -keysize 2048 -validity 10000
+Crear un keystore (s+olo si es necesario): solar0
+keytool -genkey -v -keystore my-release-key.keystore -alias solar0 -keyalg RSA -keysize 2048 -validity 10000
 
 Firmar la APK:
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app/build/outputs/apk/release/app-release-unsigned.apk XXX
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app/build/outputs/apk/release/app-release-unsigned.apk solar0
 
 Optimizar la APK:
-C:\Users\RUTA\zipalign.exe -v 4 app/build/outputs/apk/release/app-release-unsigned.apk MyApp.apk
+C:\Users\Inelcom\Documents\App_Prueba\SolarSolutions2.0\SSv2\zipalign.exe -v 4 app/build/outputs/apk/release/app-release-unsigned.apk MyApp.apk
 
 
 Verificar la Firma:
